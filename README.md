@@ -19,27 +19,27 @@ An n-gram is a contiguous sequence of n items (words) from a given text. For exa
 
 **Main Components of the Code:**
 
-build_markov_chain(text, n)
+1.build_markov_chain(text, n)
 This function processes the input text to build a dictionary (the Markov chain) where:
 
-Keys are n-grams (tuples of n words).
+-Keys are n-grams (tuples of n words).
 
-Values are lists of possible words that follow each n-gram.
+-Values are lists of possible words that follow each n-gram.
 
-text: the input paragraph as a string.
+-text: the input paragraph as a string.
 
-n: the size of the n-gram (e.g., 1 for unigram, 2 for bigram).
+-n: the size of the n-gram (e.g., 1 for unigram, 2 for bigram).
 
-generate_text(markov_chain, n, length, start=None)
+2.generate_text(markov_chain, n, length, start=None)
 This function uses the Markov chain to generate new text.
 
-markov_chain: the dictionary created from the build function.
+-markov_chain: the dictionary created from the build function.
 
-n: n-gram size (must match what was used to build the chain).
+-n: n-gram size (must match what was used to build the chain).
 
-length: the desired number of words in the generated text.
+-length: the desired number of words in the generated text.
 
-start: optional starting n-gram (as a tuple of words); if not provided or invalid, a random one is chosen.
+-start: optional starting n-gram (as a tuple of words); if not provided or invalid, a random one is chosen.
 
 
 **How It Works:**
